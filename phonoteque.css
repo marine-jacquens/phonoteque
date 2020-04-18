@@ -189,6 +189,25 @@ input[type="text"],button:focus {outline:none;}
 
 /*FILM-SERIES-BO*/
 
+/*Section video*/
+
+.promo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:auto;
+  max-height: 500px;
+  overflow: hidden;
+}
+@media (max-width:799px) {
+  .promo{
+    display: none;
+  }
+}
+#myVideo{
+    width:100%;
+}
+
 /*Section articles*/
 
 #compositeurs-F&S{
@@ -198,12 +217,34 @@ input[type="text"],button:focus {outline:none;}
 }
 
 article{
+    display:flex;
+    flex-direction: column;
     box-shadow:3px 3px 3px lightgray;
-    background-image: url(ressources/john-williams.jpg);
-    background-position: right;
-    background-size:contain;
-    background-repeat: no-repeat;
+    border:0.1px solid #bbb;
+    padding:2%;
+    margin-bottom:5%;
 }
+
+.titre{text-align: center;}
+
+.corps{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.text {
+    text-align: justify;
+    background-color:lightgray;
+    padding:2%;
+    width:40%;
+}
+
+.image{display: flex; align-items: center;}
+
+
+
 
 /*Sections playlist*/
 
