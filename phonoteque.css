@@ -31,15 +31,17 @@ main{
     width:100%;
 }
 
-.navbar a h1{
+.navbar a {text-decoration: none;}
+
+.navbar h1{
     border-top:3px white solid;
     border-bottom:3px white solid;
     margin:0;
-    text-decoration: none; /*marche pas*/
     color:white;
 }
 
-.navbar a h1:hover{color:red;}
+.navbar h1:hover{text-shadow: 0 0 22px #FF0000;}
+.navbar a h1:hover{box-shadow: 0 0 22px #FF0000;}
 
 .dropdown {
     position: relative;
@@ -51,10 +53,7 @@ main{
     font-size: 16px;
 }
 
-.dropbtn a {
-    color:white;
-    text-decoration: none;
-}
+.dropbtn a {color:white;}
 
 .dropdown-content {
   display: none;
@@ -68,7 +67,6 @@ main{
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
-  text-decoration: none;
   display: block;
 }
 
@@ -113,6 +111,33 @@ input[type="text"],button:focus {outline:none;}
   }
 }
 
+#list-menu{
+  width: 100%;
+  height: 100%;
+}
+
+#list-menu :hover ul{
+  visibility: visible;
+    opacity:0.6;
+}
+
+#list-menu, #list-menu ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.part1{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 40px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .nav-tool{
   width: 35px;
   height: 30px;
@@ -128,33 +153,6 @@ input[type="text"],button:focus {outline:none;}
   width: 35px;
   height: 4px;
   border-radius: 2px;
-}
-
-#list-menu, #list-menu ul{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#list-menu{
-  width: 100%;
-  height: 100%;
-}
-
-#list-menu :hover ul{
-  visibility: visible;
-    opacity:0.6;
-}
-
-.part1{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  width: 40px;
-  margin-right: 0;
-  margin-left: auto;
 }
 
 .part2{
@@ -189,66 +187,169 @@ input[type="text"],button:focus {outline:none;}
 
 /*FILM-SERIES-BO*/
 
+section{margin:5%;}
+
+.titres h1{
+    margin-top:5%;
+    margin-bottom:5%;
+    color:white;}
+
 /*Section video*/
 
-.promo{
+.video{
   display:flex;
   justify-content: center;
   align-items: center;
   width:auto;
   max-height: 500px;
-  overflow: hidden;
 }
-@media (max-width:799px) {
-  .promo{
-    display: none;
-  }
-}
+
 #myVideo{
     width:100%;
 }
 
 /*Section articles*/
 
-#compositeurs-F&S{
+.positionnement{
+    margin-top:10%;
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
 
-article{
+.cadre{
     display:flex;
     flex-direction: column;
+    border:0.1px solid lightgray; 
+    padding:5%; 
+    background-color: white;
+}
+
+.cadre h2{color:black;}
+
+.majeur{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow:3px 3px 3px lightgray;
-    border:0.1px solid #bbb;
-    padding:2%;
+    border:0.1px solid lightgray;
     margin-bottom:5%;
 }
 
-.titre{text-align: center;}
-
 .corps{
+    display:flex;
+    flex-direction: row;   
+}
+
+.text{
+    display: flex;
+    flex-direction:column;
+    text-align: justify;
+    color:black;
+    padding:2%;
+    width:40%;
+    flex-grow: 1;
+}
+
+.text h2{text-align: center;color:black;}
+.text h2 a {text-decoration: none;color:red;}
+.text h2 a:hover{color:aliceblue;}
+
+.link-social-network{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bouton-lire,.social-network{flex-grow:1;}
+
+.bouton-lire a {
+    text-decoration:none;
+    color:red;
+    border-radius:30px;
+    padding:5%;
+}
+
+.bouton-lire a:hover{
+    background-color:aliceblue;
+    color:darkblue;}
+
+.social-network {
+    font-size:30px;
+    border-radius:30px;
+    padding:1%;
+    text-align: center;
+}
+
+.social-network:hover{
+    background-color:white;
+    box-shadow:3px 3px 3px #333;
+}
+
+.social-network a{
+    text-decoration: none;
+    color:red;
+}
+
+.social-network a:hover{
+    background-color:aliceblue;
+    border-radius:10px;
+    color:darkblue;
+    background-color:white;
+    box-shadow:3px 3px 3px #333;
+}
+
+.social-network i {margin:2%;}
+
+.image{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 1;
+}
+
+.mineur{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-
+    color:black;
 }
 
-.text {
-    text-align: justify;
-    background-color:lightgray;
-    padding:2%;
+.mini-article{ 
+    box-shadow:3px 3px 3px lightgray;
+    border:0.1px solid lightgray;
     width:40%;
+    text-align: justify;
+    padding:4%;
 }
 
-.image{display: flex; align-items: center;}
+.mini-article h2{text-align: center}
+.mini-article img{width:100%;}
 
-
-
+@media (max-width:1200px) {
+  .corps{
+      display: flex;
+      flex-wrap:wrap-reverse;
+  }
+    .text,.mini-article{padding:5%;}
+    .text,.image img{width:100%;}
+    .mineur{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .mini-article{
+        width:auto;
+        margin-bottom:3%;
+    }
+}
 
 /*Sections playlist*/
 
-section{margin:5%;}
+#playlist-style{
+        background-color:black;
+        color:white; 
+    }
 
 .playlist-compositions{
     display:flex;
@@ -259,32 +360,34 @@ section{margin:5%;}
 .composition{
     display:flex;
     flex-direction: column;
-    border:3px solid white;
     border-radius:30px;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px white;
     background-color:black;
     color:white;
     padding:3%;
     margin:%;
     width:25%;
     height:500px;
+     -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
-.background-playlist{
-    background-position: top;
-    background-size:contain;
-    background-repeat: no-repeat;
+.composition:hover{box-shadow: 0 0 12px #FF0000;}
+
+/*.composition:focus { 
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 10px red;
+} à enlever ?*/
+
+@media (min-width:900px) {
+  .composition:hover{
+      -webkit-transform: scale(1.1);
+	   transform: scale(1.1);
+  }
 }
-
-#composer1{background-image: url(ressources/john-williams.jpg);}
-#composer2{background-image: url(ressources/hans-zimmer.jpg);}
-#composer3{background-image: url(ressources/thomas-newman.jpg);}
-#playlist-film{background-image: url(ressources/playlist-film.jpg);}
-#playlist-serie{background-image: url(ressources/playlist-serie.jpg);}
-
-
-.invisible-scrollbar{overflow:auto;}
-.invisible-scrollbar::-webkit-scrollbar{display: none;}
 
 .composition h2 {
     margin-top:55%;
@@ -300,6 +403,21 @@ section{margin:5%;}
     flex-direction: column;
     list-style-type: decimal;
 }
+
+.background-playlist{
+    background-position: top;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+#composer1{background-image: url(ressources/john-williams.jpg);}
+#composer2{background-image: url(ressources/hans-zimmer.jpg);}
+#composer3{background-image: url(ressources/thomas-newman.jpg);}
+#playlist-film{background-image: url(ressources/playlist-film.jpg);}
+#playlist-serie{background-image: url(ressources/playlist-serie.jpg);}
+
+.invisible-scrollbar{overflow:auto;}
+.invisible-scrollbar::-webkit-scrollbar{display: none;}
 
 .lecteur{
     display: flex;
@@ -319,6 +437,15 @@ section{margin:5%;}
     outline:none;
     height:40px;
     margin-right:5%;
+    transition: drop-shadow 0.2s ease;
+}
+
+.lecteur audio:hover{
+    filter: drop-shadow(0 0 0.75rem red);
+}
+
+#best-bo audio:hover{
+    filter: drop-shadow(0 0 0.75rem white)
 }
 
 @media (max-width:1200px) {
@@ -326,14 +453,31 @@ section{margin:5%;}
       display: flex;
       flex-wrap: wrap;
   }
-    .composition{width:auto;}
+    .composition{
+        width:auto;
+        margin-bottom:3%;
+    }
+    
+    .composition ul{width:auto;}
 }
 
 @media (max-width:900px) {
   .playlist-compositions{
       display:flex;
-      flex-direction: column;
+      flex-direction: wrap;
   }
-    .composition{width:auto;}
-    #playlist-style{background-color:black;color:white;}
+    .composition{
+        width:auto;
+        margin-bottom:3%;}
+}
+
+@media (max-width:600px) {
+  .playlist-compositions{
+      display:flex;
+      flex-direction: wrap;
+  }
+    .composition{
+        width:auto;
+        height:700px;
+        margin-bottom:5%;}
 }
