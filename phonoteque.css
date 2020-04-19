@@ -15,6 +15,11 @@ main{
     margin:0 auto;
 }
 
+.fond-noir{
+    background-color:black;
+    color:white;
+}
+
 /*HEADER*/
 
 .navbar{
@@ -184,8 +189,155 @@ input[type="text"],button:focus {outline:none;}
 
 .part2 li a:hover{background-color:red;}
 
+/*HOME PHONOTEQUE*/
 
-/*FILM-SERIES-BO*/
+.playlist {/*modifié*/
+    display: flex;
+    flex-direction: column;
+    margin-top:5%;
+    
+}
+
+
+.playlist a img{transition: .3s ease-in-out;}
+.playlist a img:hover{box-shadow: 0 0 12px white;}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size:12px;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    overflow:auto;
+}
+
+.list::-webkit-scrollbar {width: 12px;height: 10px;}
+ 
+/* Track */
+.list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: white; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.list::-webkit-scrollbar-thumb:window-inactive {
+	background: grey; 
+}
+
+.case{margin:1%;}
+
+ @-webkit-keyframes bounceInRight {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(2000px);
+            }
+            60% {
+               opacity: 1;
+               -webkit-transform: translateX(-30px);
+            }
+            80% {
+               -webkit-transform: translateX(10px);
+            }
+            100% {
+               -webkit-transform: translateX(0);
+            }
+         }
+         
+         @keyframes bounceInRight {
+            0% {
+               opacity: 0;
+               transform: translateX(2000px);
+            }
+            60% {
+               opacity: 1;
+               transform: translateX(-30px);
+            }
+            80% {
+               transform: translateX(10px);
+            }
+            100% {
+               transform: translateX(0);
+            }
+         }
+         
+.bounceInRight {
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
+
+.carre{
+    display: flex;
+    flex-direction: column;
+    width:25%;
+}
+
+
+.roundedImage img{
+    overflow:hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    width:190px; /*modifié*/
+    height:190px;
+}
+
+.center{
+    text-align: center;
+}
+
+.center h3 a {
+    color:white;
+    text-decoration: none;
+}
+
+.center cite a {
+    color:grey;
+    text-decoration: none;
+}
+
+.center a:hover{
+    color:orangered;
+}
+
+.roundedImage2{display: flex;}
+
+.roundedImage2 img{
+    overflow:hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+}
+
+.sous-titre{
+    display:flex;
+    flex-direction: column;
+    margin-left:1%;
+}
+
+.sous-titre h4{
+    font-size:10px;
+    margin-top:0;
+    color:grey;
+}
+
+.sous-titre h2 {margin-top:0;}
+.sous-titre a {text-decoration:none;color:white;}
+.sous-titre a:hover{color:orangered;}
+
+
+/*STYLE FILM-SERIES-BO*/
 
 section{margin:5%;}
 
@@ -197,12 +349,14 @@ section{margin:5%;}
 /*Section video*/
 
 .video{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width:auto;
-  max-height: 500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    max-height: 500px;
 }
+
+.video video {outline:none;}
 
 #myVideo{
     width:100%;
@@ -364,6 +518,7 @@ section{margin:5%;}
     box-shadow: 3px 3px 3px white;
     background-color:black;
     color:white;
+    text-shadow:1px 1px 3px black;
     padding:3%;
     margin:%;
     width:25%;
@@ -480,4 +635,43 @@ section{margin:5%;}
         width:auto;
         height:700px;
         margin-bottom:5%;}
+}
+
+/*STYLE ANIME-OST*/
+
+.fond1{
+    background: url(ressources/fond1.jpg)repeat bottom;
+    background-size:contain;
+}
+
+#best-composer-anime{text-shadow:3px 3px 3px black; }
+
+.playlist-hover:hover{box-shadow: 0 0 12px blue;}
+.playlist-hover audio:hover{filter: drop-shadow(0 0 0.75rem white)}
+.playlist-hover i{color:white;}
+.playlist-hover i:hover{color:deeppink}
+
+
+#composer4{
+    background-image: url(ressources/fond2.jpg);
+    background-size:cover;
+}
+
+#composer5{
+    background-image: url(ressources/fond3.jpg);
+    background-size:cover;
+}
+
+#composer6{
+    background-image: url(ressources/fond4.jpg);
+    background-size:cover;
+}
+
+#playlist-animef{
+    background-image: url(ressources/fond5.jpg);
+    background-size:cover;
+}
+#playlist-animes{
+    background-image: url(ressources/fond6.jpg);
+    background-size:cover;
 }
