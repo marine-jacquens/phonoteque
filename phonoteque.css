@@ -18,6 +18,7 @@ main{
 .fond-noir{
     background-color:black;
     color:white;
+    width:100%
 }
 
 /*HEADER*/
@@ -198,7 +199,7 @@ input[type="text"],button:focus {outline:none;}
     
 }
 
-
+.case{margin:3%;}
 .playlist a img{transition: .3s ease-in-out;}
 .playlist a img:hover{box-shadow: 0 0 12px white;}
 
@@ -213,6 +214,7 @@ input[type="text"],button:focus {outline:none;}
     animation-fill-mode: both;
     overflow:auto;
 }
+
 
 .list::-webkit-scrollbar {width: 12px;height: 10px;}
  
@@ -232,7 +234,7 @@ input[type="text"],button:focus {outline:none;}
 	background: grey; 
 }
 
-.case{margin:1%;}
+
 
  @-webkit-keyframes bounceInRight {
             0% {
@@ -337,7 +339,6 @@ input[type="text"],button:focus {outline:none;}
 .sous-titre a {text-decoration:none;color:white;}
 .sous-titre a:hover{color:orangered;}
 
-
 /*STYLE FILM-SERIES-BO*/
 
 section{margin:5%;}
@@ -355,6 +356,7 @@ section{margin:5%;}
     align-items: center;
     width:auto;
     max-height: 500px;
+    position: relative;
 }
 
 .video video {outline:none;}
@@ -362,6 +364,32 @@ section{margin:5%;}
 #myVideo{
     width:100%;
 }
+
+.overlay {
+  position: absolute;
+  bottom: 20%;
+  top: 55%;
+  right: 0%;
+  left: -5%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.video:hover .overlay {
+  opacity: 1;
+}
+
 
 /*Section articles*/
 
@@ -604,7 +632,7 @@ section{margin:5%;}
     filter: drop-shadow(0 0 0.75rem white)
 }
 
-@media (max-width:1200px) {
+@media (max-width:1300px) {
   .playlist-compositions{
       display: flex;
       flex-wrap: wrap;
@@ -625,6 +653,8 @@ section{margin:5%;}
     .composition{
         width:auto;
         margin-bottom:3%;}
+
+    .overlay{font-size: 15px;}
 }
 
 @media (max-width:600px) {
@@ -636,6 +666,11 @@ section{margin:5%;}
         width:auto;
         height:700px;
         margin-bottom:5%;}
+
+    .overlay{
+        font-size: 15px;
+        padding:2%;
+    }
 }
 
 /*STYLE ANIME-OST*/
