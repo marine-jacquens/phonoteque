@@ -1,6 +1,6 @@
 html{scroll-behavior: smooth;}
 
-body{ /*modifié*/
+body{
     display: flex;
     flex-direction: column;
     min-height:100vh;
@@ -549,7 +549,6 @@ section{margin:5%;}
     color:white;
     text-shadow:1px 1px 3px black;
     padding:3%;
-    margin:%;
     width:25%;
     height:500px;
      -webkit-transform: scale(1);
@@ -559,12 +558,6 @@ section{margin:5%;}
 }
 
 .composition:hover{box-shadow: 0 0 12px #FF0000;}
-
-/*.composition:focus { 
-    outline: none;
-    border-color: red;
-    box-shadow: 0 0 10px red;
-} à enlever ?*/
 
 @media (min-width:900px) {
   .composition:hover{
@@ -1183,18 +1176,12 @@ audio{outline: none}
     text-align: center;
 }
 
-a
-{
-    text-decoration: none;
-}
+a{text-decoration: none;}
 
-#AchievementsMain
-  {
+#AchievementsMain{
     width:50%;
     margin:auto;
     margin-top:50px;
-    
-    
     display:flex;
     flex-wrap:row wrap;
   }
@@ -1300,7 +1287,6 @@ a
 	margin:auto;
 	position:relative;
 	bottom:5px;
-	
 	transition:transform 1.2s ease;
 }
 
@@ -1327,8 +1313,8 @@ a
 	display:none;
 	flex-direction:column;
     margin-right: 0;
-     margin-left: 0;
-     margin-bottom: 0;
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 #footerButton:checked~#curFooter
