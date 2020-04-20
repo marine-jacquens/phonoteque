@@ -616,7 +616,7 @@ section{margin:5%;}
     filter: drop-shadow(0 0 0.75rem white);
 }
 
-@media (max-width:1300px) {
+@media (max-width:1200px) {
   .playlist-compositions{
       display: flex;
       flex-wrap: wrap;
