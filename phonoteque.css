@@ -18,7 +18,7 @@ main{
 .fond-noir{
     background-color:black;
     color:white;
-    width:100%
+    width:100%;
 }
 
 /*HEADER*/
@@ -230,11 +230,7 @@ input[type="text"],button:focus {outline:none;}
     background: white; 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
-.list::-webkit-scrollbar-thumb:window-inactive {
-	background: grey; 
-}
-
-
+.list::-webkit-scrollbar-thumb:window-inactive {background: grey;}
 
  @-webkit-keyframes bounceInRight {
             0% {
@@ -361,9 +357,7 @@ section{margin:5%;}
 
 .video video {outline:none;}
 
-#myVideo{
-    width:100%;
-}
+#myVideo{width:100%;}
 
 .overlay {
   position: absolute;
@@ -386,10 +380,7 @@ section{margin:5%;}
   text-align: center;
 }
 
-.video:hover .overlay {
-  opacity: 1;
-}
-
+.video:hover .overlay {opacity: 1;}
 
 /*Section articles*/
 
@@ -548,9 +539,9 @@ section{margin:5%;}
     background-color:black;
     color:white;
     text-shadow:1px 1px 3px black;
-    padding:3%;
+    padding:2%;
     width:25%;
-    height:500px;
+    height:600px;
      -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
@@ -622,7 +613,7 @@ section{margin:5%;}
 }
 
 #best-bo audio:hover{
-    filter: drop-shadow(0 0 0.75rem white)
+    filter: drop-shadow(0 0 0.75rem white);
 }
 
 @media (max-width:1300px) {
@@ -676,9 +667,9 @@ section{margin:5%;}
 #best-composer-anime{text-shadow:3px 3px 3px black; }
 
 .playlist-hover:hover{box-shadow: 0 0 12px blue;}
-.playlist-hover audio:hover{filter: drop-shadow(0 0 0.75rem white)}
+.playlist-hover audio:hover{filter: drop-shadow(0 0 0.75rem white);}
 .playlist-hover i{color:white;}
-.playlist-hover i:hover{color:deeppink}
+.playlist-hover i:hover{color:deeppink;}
 
 
 #composer4{
@@ -748,13 +739,14 @@ footer p{
   flex-direction: column;
   margin: 2%;
 }
-.fanclub ul{
-  padding: 0;
-}
+
+.fanclub ul{padding: 0;}
+
 .fanclub li{
   list-style: none;
   font-family: 'Kanit', sans-serif;
 }
+
 footer a{
   text-decoration:none;
   color:white;
@@ -793,7 +785,6 @@ footer a:hover{
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 
@@ -802,13 +793,11 @@ footer a:hover{
 
 .fond-rap{background-color: #333;}
 
-
 .presentationMain
 {
 	display:flex;
 	width:100%;
 	margin:auto;
-	
 	padding-bottom:3rem;
 	border-bottom:1px solid;
 	border-image: linear-gradient(to right, transparent, white, transparent) 100% 1;
@@ -850,10 +839,7 @@ footer a:hover{
     font-family: 'Prata', serif;
 }
 
-.presentationMain section h1
-{
-	text-align:center;
-}
+.presentationMain section h1{text-align:center;}
 
 
 .our-plants h6
@@ -963,9 +949,8 @@ footer a:hover{
     margin: auto;
     margin-top: 5%;
     width: 80%;
-    
-    
 }
+
 .img_row_1
 {
     width: 22%;
@@ -975,6 +960,7 @@ footer a:hover{
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
+
 .img_row_1:hover
 {
     -webkit-transform: scale(1.3);
@@ -1328,8 +1314,6 @@ a{text-decoration: none;}
 	transform:translateY(-8rem);
 	z-index:1;
 }
-
-
 
 #footerButton:checked~#footerLabel span:nth-child(1)
 {
