@@ -557,9 +557,10 @@ section{margin:5%;}
   }
 }
 
-.composition h2 {
+.composition marquee {
     margin-top:55%;
     text-align: center;
+    z-index: 10000;
 }
 
 .composition pre{font-family:sans-serif;}
