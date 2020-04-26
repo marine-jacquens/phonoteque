@@ -967,8 +967,6 @@ footer a:hover{
     transform: scale(0.9);
 }
 
-#article-pop{margin-top:10%;}
-
 /*------------------- Audio ----------------------- */
 
 audio{outline: none}
@@ -1009,59 +1007,66 @@ audio{outline: none}
 }
 
 #achievements{
-    font-family: 'Roboto', sans-serif;
-    background-color: black;
-    padding: 20px;
-    color: #FFFFFF;
+}
 
+@media (max-width:799px){
+
+}
+
+.head-of-hit {background-color:#333;}
+
+.head-of-hit h1{
+    margin-top:15%;
+    color:white;
+    font-size:30px;
 }
 
 .Achievements-1{
     display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    align-items:center;
-    font-family: 'Roboto', sans-serif;
-
+    flex-direction:column;
+    background-color:black;
+    padding:5%;
+    width:auto;
+    color: white;
 }
 
-
-
-.Achievements-1 img {
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    min-height:0;
-    min-width:0;
-    max-height:450px;
-    max-width:610px;
-    margin:20px;
-    filter: grayscale(80%);
-    transition: transform .2s;
-}
-
-#achievements2{
-    flex-grow:3;
-}
-
-#achievements3{
-    flex-grow:2;
-}
-
-#achievements4{
-    flex-grow:3;
-}
-
-#achievements5{
-    flex-grow:3;
-}
+.Achievements-1 img {width:70%;}
 
 .Achievements-1 img:hover {
     transform: scale(1.1); 
     filter:none;
+    width:auto:
 }
 
+.playlist-gaga{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-1{
+    display: flex;
+    justify-content: center;
+}
+
+.image-2{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom:5%;
+}
+
+.image-3{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom:5%;
+}
+
+.info-of-ladygaga{
+    align-items: center;
+    text-align: justify;
+    width:auto;
+    padding:5%;
+}
 
 .button1
 {
@@ -1123,19 +1128,15 @@ audio{outline: none}
 .logos
 {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    margin: auto;
-    width: 30%;
     margin-top: 5%;
-    transition-property: all;
-    justify-content: space-between;
 }
 
-.logos img
-{
-    width: 20%;
-    justify-content: center;
+.logos i{
+    width:100px;
+    font-size:30px;
+    color:#ffd152;
+    justify-content: space-around;
     display: flex;
     margin: auto;
 }
@@ -1151,15 +1152,6 @@ audio{outline: none}
     justify-content: center;
     margin: 0;
     margin-top: 3%;
-}
-
-
-.head-of-hit 
-{
-    justify-items: center;
-    margin: auto;
-    display: flex;
-    text-align: center;
 }
 
 a{text-decoration: none;}
